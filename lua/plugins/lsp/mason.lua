@@ -27,13 +27,13 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        -- "tsserver",
+        "tsserver",
         "html",
         "cssls",
         "tailwindcss",
         "lua_ls",
         "pyright",
-        "gopls",
+        -- "gopls",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -47,8 +47,8 @@ return {
         "black", -- python formatter
         "pylint", -- python linter
         "eslint_d", -- js linter
-        "gofumpt", -- go formatter
-        "goimports-reviser", -- go formatter
+        -- "gofumpt", -- go formatter
+        -- "goimports-reviser", -- go formatter
       },
       automatic_installation = true,
     })

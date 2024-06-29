@@ -8,6 +8,7 @@ return {
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
+    local util = require("lspconfig.util")
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -79,6 +80,7 @@ return {
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      -- root_dir = util.root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git"),
     })
 
     -- configure css server
@@ -114,11 +116,11 @@ return {
       },
     })
 
-    lspconfig["gopls"].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-      cmd = { "gopls" },
-      filetypes = { "go", "gomod", "gowork", "gotmpl" },
-    })
+    -- lspconfig["gopls"].setup({
+    --   on_attach = on_attach,
+    --   capabilities = capabilities,
+    --   cmd = { "gopls" },
+    --   filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    -- })
   end,
 }

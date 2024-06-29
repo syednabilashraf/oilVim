@@ -1,4 +1,5 @@
 require("config.lazy")
+require("nvim-treesitter.install").prefer_git = true
 vim.cmd([[set clipboard=unnamedplus]])
 
 -- Map dd to "_dd in normal mode
